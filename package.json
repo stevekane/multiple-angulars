@@ -1,12 +1,12 @@
 {
   "name": "ng-local",
   "version": "1.0.0",
-  "description": "",
+  "description": "Example application running plugin with version of angular alongside client application runing different version of angular",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "browserify -d --o public/app.js index.js",
-    "watch-src": "watchify -d -o public/app.js index.js",
+    "compile": "browserify -d --o public/plugin.js index.js",
+    "watch-src": "watchify -d -o public/plugin.js index.js",
     "start": "http-server -p 4004",
     "watch": "npm run watch-src & npm run start"
   },
