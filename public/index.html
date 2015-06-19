@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head></head>
+<body>
+  <div id="root" ng-controller="AppCtrl as ctrl">
+    {{ctrl.appContent}} 
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.min.js">
+  </script>
+
+  <script src="app.js"></script>
+  <script>
+    var root = document.getElementById('root')
+
+    angular.module('app', [])
+    angular.module('app').controller('AppCtrl', [function () {
+      this.appContent = 'some stuff loaded from the app' 
+    }])
+    angular.element(document).ready(function () {
+      angular.bootstrap(root, ['app']) 
+    })
+    console.log('Their app uses', angular.version)
+  </script>
+</body>
+</html>

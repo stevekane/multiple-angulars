@@ -1,0 +1,23 @@
+{
+  "name": "ng-local",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "browserify -d --o public/app.js index.js",
+    "watch-src": "watchify -d -o public/app.js index.js",
+    "start": "http-server -p 4004",
+    "watch": "npm run watch-src & npm run start"
+  },
+  "author": "Steve Kane <kanesteven@gmail.com> (github.com/stevekane)",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.1"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.4",
+    "http-server": "^0.8.0",
+    "watchify": "^3.2.2"
+  }
+}
